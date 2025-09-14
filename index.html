@@ -37,54 +37,42 @@
             max-width: 500px;
             overflow: hidden;
             transition: all 0.5s ease;
-            position: relative;
         }
         
         .header {
             background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: white;
-            padding: 30px 20px;
+            padding: 20px;
             text-align: center;
             position: relative;
         }
         
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
         .profile-img {
-            position: absolute;
-            width: 60px;
-            height: 60px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            border: 3px solid white;
+            border: 4px solid white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             object-fit: cover;
-            z-index: 10;
+            margin-bottom: 10px;
         }
         
-        .img-position-top-right {
-            top: 20px;
-            right: 20px;
+        .profile-name {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 5px;
         }
         
-        .img-position-top-left {
-            top: 20px;
-            left: 20px;
-        }
-        
-        .img-position-bottom-right {
-            bottom: 20px;
-            right: 20px;
-        }
-        
-        .img-position-bottom-left {
-            bottom: 20px;
-            left: 20px;
-        }
-        
-        .img-position-center {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
+        .profile-title {
+            font-size: 14px;
+            opacity: 0.9;
         }
         
         h1 {
@@ -95,7 +83,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: color 0.5s ease;
         }
         
         .subtitle {
@@ -106,7 +93,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: color 0.5s ease;
         }
         
         .content {
@@ -121,7 +107,6 @@
             display: flex;
             align-items: center;
             margin-bottom: 15px;
-            transition: color 0.5s ease;
         }
         
         .benefit-icon {
@@ -179,7 +164,6 @@
             margin-top: 20px;
             font-size: 14px;
             color: #777;
-            transition: color 0.5s ease;
         }
         
         .badge {
@@ -196,50 +180,6 @@
         .free-label {
             color: var(--accent-color);
             font-weight: bold;
-            transition: color 0.5s ease;
-        }
-        
-        .image-position-controls {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .position-btn {
-            background: #f1f1f1;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 12px;
-            transition: all 0.3s;
-        }
-        
-        .position-btn:hover {
-            background: #e0e0e0;
-        }
-        
-        .position-btn.active {
-            background: var(--primary-color);
-            color: white;
-        }
-        
-        .toggle-image-btn {
-            background: #f1f1f1;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 12px;
-            transition: all 0.3s;
-            margin-top: 10px;
-            width: 100%;
-        }
-        
-        .toggle-image-btn:hover {
-            background: #e0e0e0;
         }
         
         @media (max-width: 576px) {
@@ -258,13 +198,8 @@
             }
             
             .profile-img {
-                width: 50px;
-                height: 50px;
-            }
-            
-            .img-position-center {
-                width: 60px;
-                height: 60px;
+                width: 80px;
+                height: 80px;
             }
         }
     </style>
@@ -272,7 +207,11 @@
 <body>
     <div class="container" id="mainContainer">
         <div class="header" id="headerSection">
-            <img src="https://scontent-dus1-1.xx.fbcdn.net/v/t39.30808-1/516687227_122204759336105054_6281471703120339581_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=e99d92&_nc_ohc=k9y8l7dWGZoQ7kNvwGPh3YI&_nc_oc=Adnzu46jYlLQVeh2F8iQmDelcpUPGI0Z16CAXHxYLqQkHypTDLzwKLKbUFIEGpXhnvI&_nc_zt=24&_nc_ht=scontent-dus1-1.xx&_nc_gid=FHthrRJS3STva687Fp8fpA&oh=00_AfYzU-2nGyMYu4uO4eA5AucqBRwX31M2LtHMP-Kit2kWiw&oe=68CC9C1B" alt="Profile" class="profile-img img-position-top-right" id="profileImage">
+            <div class="profile-container">
+                <img src="https://scontent-dus1-1.xx.fbcdn.net/v/t39.30808-1/516687227_122204759336105054_6281471703120339581_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=e99d92&_nc_ohc=k9y8l7dWGZoQ7kNvwGPh3YI&_nc_oc=Adnzu46jYlLQVeh2F8iQmDelcpUPGI0Z16CAXHxYLqQkHypTDLzwKLKbUFIEGpXhnvI&_nc_zt=24&_nc_ht=scontent-dus1-1.xx&_nc_gid=FHthrRJS3STva687Fp8fpA&oh=00_AfYzU-2nGyMYu4uO4eA5AucqBRwX31M2LtHMP-Kit2kWiw&oe=68CC9C1B" alt="Profile" class="profile-img">
+                <div class="profile-name">Sandy Arta</div>
+                <div class="profile-title">Online Marketing Expert</div>
+            </div>
             
             <h1 id="dynamicTitle">No Skills, No Problem? Here's How to Get Started Anyway</h1>
             <p class="subtitle" id="dynamicSubtitle">Finally understand how real beginners with no experience are making their first money online</p>
@@ -311,16 +250,6 @@
                 <input type="hidden" name="source" value="" id="sourceInput">
                 <button type="submit">Get My FREE Guide Now</button>
             </form>
-            
-            <div class="image-position-controls">
-                <button class="position-btn active" data-position="top-right">Top Right</button>
-                <button class="position-btn" data-position="top-left">Top Left</button>
-                <button class="position-btn" data-position="bottom-right">Bottom Right</button>
-                <button class="position-btn" data-position="bottom-left">Bottom Left</button>
-                <button class="position-btn" data-position="center">Center</button>
-            </div>
-            
-            <button class="toggle-image-btn" id="toggleImageBtn">Hide Image</button>
             
             <p class="privacy">We respect your privacy. We will never spam you</p>
         </div>
@@ -442,4 +371,156 @@
             "No more 'get rich quick' schemes - just honest, practical strategies that work",
             "Finally cut through the noise and discover what actually works for beginners",
             "Transform from curious to earning with our realistic approach to online income",
-            "Stop wondering
+            "Stop wondering if it's possible and start your journey toward proven results",
+            "The anxiety-free way to explore online income opportunities that match your skills",
+            "Learn how ordinary people are making extra money online without special talents",
+            "Your healthy skepticism is welcome here - we provide proof, not just promises",
+            "Finally an online income guide that doesn't require you to be salesy or pushy",
+            "Discover the unsexy but effective methods that actually generate real income",
+            "Your journey from 'I don't know where to start' to 'I made my first dollar online'",
+            "No more information overload - just clear, actionable steps to get started",
+            "Learn why your doubts about online income are valid and how to navigate them",
+            "Practical strategies that respect your time and don't promise unrealistic results",
+            "Finally understand what it really takes to make your first money online",
+            "The common-sense approach to online income that prioritizes sustainability over hype",
+            "Your questions answered: How much time? How much money? What skills needed?",
+            "Discover beginner-friendly methods that don't require technical expertise",
+            "From confusion to clarity: Your roadmap to making sense of online income",
+            "Learn how to avoid common pitfalls that keep beginners from earning online",
+            "Your first online dollar is closer than you think with our realistic approach",
+            "No special talent required - just willingness to learn and take action",
+            "Finally an online income guide that speaks honestly about effort and results",
+            "Join a community of realistic beginners who are supporting each other's journey",
+            "Discover the truth about time commitment and realistic earnings for beginners",
+            "Your roadmap from complete beginner to earning your first money online",
+            "Learn how to navigate online income opportunities without falling for scams",
+            "Practical steps that respect your skepticism and focus on what actually works",
+            "Finally understand which 'make money online' methods are realistic for beginners",
+            "Your journey from 'I've tried everything' to 'this actually works for me'",
+            "No more magical thinking - just practical strategies with realistic expectations",
+            "Discover how your existing skills, however basic, can generate online income",
+            "The honest conversation about online income that we wish we'd had when starting",
+            "Your first steps toward online income without quitting your day job",
+            "Learn from someone who was once exactly where you are now - skeptical and confused",
+            "Finally a realistic timeline for when you can expect to see your first results",
+            "Your guide to navigating the overwhelming world of online income opportunities",
+            "Practical methods that don't require you to invest money you don't have",
+            "Discover how to start small and build momentum toward your first online earnings",
+            "The truth about what 'making money online' really looks like for beginners",
+            "Your healthy skepticism is an asset - learn how to use it to find what really works",
+            "No more comparing yourself to 'gurus' - focus on your realistic journey",
+            "Finally understand the actual time investment required for online income",
+            "Your roadmap from complete uncertainty to confident action and first earnings",
+            "Learn how to avoid the common mistakes that keep beginners stuck",
+            "Practical strategies that work with your schedule and current responsibilities",
+            "Discover the beginner-friendly methods that don't require technical wizardry",
+            "Your guide to making sense of all the conflicting advice about online income",
+            "Finally an approach that acknowledges the doubts and fears beginners face",
+            "Learn how real people with real limitations are making money online",
+            "Your first online income doesn't have to be complicated - just consistent",
+            "The honest economics of online income: What beginners actually earn",
+            "Discover methods that match your personality, skills, and comfort level",
+            "Your journey from 'I'm not tech-savvy' to 'I figured this out'",
+            "No more magical thinking - just practical steps that lead to real results",
+            "Finally understand which skills are actually valuable for online income",
+            "Your roadmap to avoiding overwhelm and taking purposeful action",
+            "Learn how to start with what you have rather than what you wish you had",
+            "Discover the satisfaction of earning your first money online through honest work",
+            "Your guide to navigating online income without falling for expensive courses",
+            "Practical methods that generate income without requiring you to be salesy",
+            "Finally an online income approach that doesn't promise overnight success",
+            "Learn how to build momentum from your first dollar to consistent earnings",
+            "Your healthy skepticism will help you find methods that actually work long-term",
+            "Discover the truth about effort versus reward in legitimate online income",
+            "No more confusion about where to start - your clear path awaits",
+            "Your journey from 'everyone seems ahead of me' to 'I'm making progress'",
+            "Learn how to overcome the initial hurdles that stop most beginners",
+            "Finally an online income guide that focuses on sustainability, not just quick wins",
+            "Discover methods that respect your boundaries and don't require 24/7 hustle",
+            "Your roadmap to making your first money online without sacrificing your values",
+            "Practical strategies that work for introverts, extroverts, and everyone between",
+            "Learn how to leverage your unique perspective and experiences for income",
+            "Finally understand the realistic timeline from starting to first payment",
+            "Your guide to avoiding the shiny object syndrome that plagues beginners",
+            "Discover how to start earning before you feel completely 'ready'",
+            "No more magical thinking - just practical, actionable steps forward",
+            "Your journey from overwhelm to clarity and purposeful action",
+            "Learn how real beginners are making their first money online right now",
+            "Finally an approach that acknowledges the mental barriers to online income",
+            "Discover methods that don't require you to be an expert or have a large audience",
+            "Your healthy skepticism is your best defense against scams and empty promises",
+            "Practical strategies that generate income without complex technical setups",
+            "Learn how to navigate the online income world without comparing your chapter 1 to someone else's chapter 20",
+            "Finally understand what 'making money online' realistically looks like month by month",
+            "Your roadmap from curiosity to committed action and first results",
+            "Discover how to start with just a few hours per week and build from there",
+            "No more confusion about which methods work for complete beginners",
+            "Your guide to overcoming the 'I don't have anything valuable to offer' mindset",
+            "Learn how ordinary people are creating extra income streams online",
+            "Finally an online income approach that doesn't require you to reinvent yourself",
+            "Discover methods that work with your current skills and knowledge",
+            "Your journey from 'is this possible?' to 'I'm doing this!'",
+            "Practical strategies that don't require expensive software or tools to start",
+            "Learn how to make your first money online without falling for hype or false promises"
+        ];
+
+        // Color schemes for the page
+        const colorSchemes = [
+            { primary: '#4776E6', secondary: '#8E54E9', accent: '#FF6B6B' },
+            { primary: '#FF416C', secondary: '#FF4B2B', accent: '#1E3A8A' },
+            { primary: '#3A86FF', secondary: '#8338EC', accent: '#FF006E' },
+            { primary: '#38B000', secondary: '#008000', accent: '#9D4EDD' },
+            { primary: '#F72585', secondary: '#7209B7', accent: '#3A0CA3' },
+            { primary: '#F3722C', secondary: '#F8961E', accent: '#43AA8B' },
+            { primary: '#05668D', secondary: '#028090', accent: '#00A896' },
+            { primary: '#6A4C93', secondary: '#1982C4', accent: '#8AC926' },
+            { primary: '#D62246', secondary: '#4EA8DE', accent: '#FFCA3A' },
+            { primary: '#240046', secondary: '#5A189A', accent: '#9D4EDD' }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select random title and subtitle
+            const randomTitleIndex = Math.floor(Math.random() * titles.length);
+            const randomSubtitleIndex = Math.floor(Math.random() * subtitles.length);
+            
+            document.getElementById('dynamicTitle').textContent = titles[randomTitleIndex];
+            document.getElementById('dynamicSubtitle').textContent = subtitles[randomSubtitleIndex];
+            
+            // Select a random color scheme
+            const randomColorScheme = colorSchemes[Math.floor(Math.random() * colorSchemes.length)];
+            
+            // Apply the color scheme
+            document.documentElement.style.setProperty('--primary-color', randomColorScheme.primary);
+            document.documentElement.style.setProperty('--secondary-color', randomColorScheme.secondary);
+            document.documentElement.style.setProperty('--accent-color', randomColorScheme.accent);
+            
+            // Traffic source detection
+            let source = 'direct';
+            
+            // Check if traffic comes from a search engine
+            if (document.referrer) {
+                const referrer = new URL(document.referrer);
+                if (referrer.hostname.includes('google')) source = 'google';
+                else if (referrer.hostname.includes('bing')) source = 'bing';
+                else if (referrer.hostname.includes('yahoo')) source = 'yahoo';
+                else if (referrer.hostname.includes('duckduckgo')) source = 'duckduckgo';
+                else source = 'referral';
+            }
+            
+            // Check for UTM parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('utm_source')) {
+                source = urlParams.get('utm_source');
+            }
+            
+            // Set source in the form
+            document.getElementById('sourceInput').value = source;
+            
+            // Form submission event
+            document.getElementById('signupForm').addEventListener('submit', function() {
+                // You can add confirmation page redirection here if needed
+            });
+        });
+    </script>
+</body>
+</html>
